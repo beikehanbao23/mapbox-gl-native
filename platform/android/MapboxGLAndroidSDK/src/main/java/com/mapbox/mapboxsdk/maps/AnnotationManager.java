@@ -118,6 +118,9 @@ class AnnotationManager {
 
       if (marker instanceof MarkerView) {
         markerViewManager.removeMarkerView((MarkerView) marker);
+      }else{
+        // do icon cleanup
+        iconManager.remove(marker.getIcon());
       }
     } else {
       // instanceOf Polygon/Polyline
